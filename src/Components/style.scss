@@ -1,0 +1,91 @@
+.wrapper-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.div-container {
+  width: 300px;
+  height: 350px;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 20px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.to-do-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 183px;
+  height: 50px;
+  border: 3px solid black;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.all-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3px;
+}
+
+.btn {
+  border-radius: 50%;
+  border: none;
+  color: whitesmoke;
+  padding: 3px 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #1d475a;
+}
+
+.btn-delete {
+  background-color: tomato;
+}
+
+.btn-add {
+  background-color: rosybrown;
+  border-radius: 10%;
+}
+
+.todo1 {
+  margin-left: 10px;
+  color: white;
+}
+
+//RESPONSIVE APP
+
+@media only screen and (max-width: 600px) {
+  .wrapper-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App {
+    font-size: 70%;
+    margin: 0;
+    padding: 0;
+    height: 160vh;
+    background: #114357;
+    background: -webkit-linear-gradient(to right, #f29492, #114357);
+    background: linear-gradient(to right, #f29492, #114357);
+  }
+}
