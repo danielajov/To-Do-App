@@ -6,13 +6,17 @@
 
 .div-container {
   width: 300px;
-  height: 350px;
+  height: 500px;
   border: 3px solid black;
-  border-radius: 20px;
+  border-radius: 5px;
   margin: 20px;
   color: black;
   text-align: center;
   font-weight: bold;
+  overflow-y: auto;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  
 }
 
 .todos {
@@ -68,6 +72,27 @@
 .todo1 {
   margin-left: 10px;
   color: white;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1c475a;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rosybrown; 
 }
 
 //RESPONSIVE APP

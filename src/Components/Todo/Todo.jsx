@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Todo = (props) => {
   const { todos, setTodosState, deleteTodoHandler } = props;
   // const [isTextShown, setIsTextShown] = useState(false);
-  const [newTodo, setNewTodo] = useState();
+  const [newTodo, setNewTodo] = useState({});
 
   const onChange = (event) => {
     setNewTodo({
@@ -15,11 +15,14 @@ const Todo = (props) => {
       name: event.target.value,
       isDone: false,
     });
+
+    console.log(event.target.value);
   };
 
   const addNewTodo = () => {
-    if (newTodo) {
+    if (newTodo.name) {
       setTodosState([...todos, newTodo]);
+      setNewTodo({});
     } else {
       alert('Empty value. Please enter a value!');
     }
@@ -62,6 +65,7 @@ const Todo = (props) => {
           autoComplete="off"
           placeholder="Add todo"
           onChange={onChange}
+          value={newTodo.name || ''}
         />
         <button className="btn btn-add" onClick={addNewTodo} type="button">
           +
